@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sensorr</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-bg-dark" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/config.html">Config</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/config.html">Documentation</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <a class="navbar-brand ms-4 me-0">Industrial Ultrasonic Sensor</a>
+
+
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle d-flex justify-content-center align-items-center"
+                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                    <img src="./assets/ico/united-kingdom-48.png" style="width: 24px;">&nbsp; En
+
+
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><button class="dropdown-item active bg-secondary" type="button"><img
+                                src="./assets/ico/united-kingdom-48.png" style="width: 24px;">&nbsp; En</button>
+                    </li>
+                    <li><button class="dropdown-item" type="button"><img src="./assets/ico/germany-48.png"
+                                style="width: 24px;">&nbsp; De</button></li>
+                    <li><button class="dropdown-item" type="button"><img src="./assets/ico/turkey-48.png"
+                                style="width: 24px;">&nbsp; Tr</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card border-left shadow h-100 py-2">
+                    <div class="card-header card-head-text text-center">
+                        Information
+                      </div>
+                    <div class="card-body">
+                        <div class="progressa">
+                            <div class="progressab" id="black-segment"></div>
+                            <div class="progressab" id="green-segment"></div>
+                            <div class="progressab" id="offset-segment"></div>
+                        </div>
+                        <div>
+                            <h4 class="text-center">Min: 100mm - Max: 3500mm</h4>
+                            <hr>
+                            <div class="mb-1">
+                                <span class="text-muted fw-normal" style="font-style: italic;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-circle-fill me-2 " viewBox="0 0 16 16" >
+                                    <circle cx="8" cy="8" r="8" />
+                                  </svg>Lower Limit: The bottom of this area is technically unsupported and therefore out of use.</span>
+                            </div>
+                            <div class="mb-1">
+                                <span class="text-muted fw-normal" style="font-style: italic;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#27a746" class="bi bi-circle-fill me-2 " viewBox="0 0 16 16" >
+                                    <circle cx="8" cy="8" r="8" />
+                                  </svg>Detection Area: The sensor will detect at selected intervals and output accordingly.</span>
+                            </div>
+                            <div class="mb-1">
+                                <span class="text-muted fw-normal" style="font-style: italic;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#ffc107" class="bi bi-circle-fill me-2 " viewBox="0 0 16 16" >
+                                    <circle cx="8" cy="8" r="8" />
+                                  </svg>Positive Offset: Adds a percentage of the offset value you set to the maximum range and extends the maximum distance in the positive direction.</span>
+                            </div>
+                            <div class="">
+                                <span class="text-muted fw-normal" style="font-style: italic;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#e74a3b" class="bi bi-circle-fill me-2 " viewBox="0 0 16 16" >
+                                    <circle cx="8" cy="8" r="8" />
+                                  </svg>Negative Offset: Subtracts the percentage of the offset value you set to the maximum range and decreases the maximum distance in the negative direction.</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="card border-left shadow h-100 py-2">
+                    <div class="card-body">
+                        <figure class="highcharts-figure">
+                            <div id="container"></div>
+                            <p class="highcharts-description">
+                                Chart showing use of plot bands with a gauge series. The chart is
+                                updated dynamically every few seconds.
+                            </p>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="card border-left shadow h-100 py-2">
+                    <div class="card-body">
+                        <div id="outputChart"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-3 g-2">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-left-danger shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col mr-2">
+                                <div class="fw-bolder text-danger text-uppercase mb-1">
+                                    Minimum Distance (mm)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">30</div>
+                            </div>
+                            <div class="col-auto">
+                                <img src="./assets/ico/down-66.png" class="text-gray-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col mr-2">
+                                <div class="fw-bolder text-success text-uppercase mb-1">
+                                    Maximum Distance (mm)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">4000</div>
+                            </div>
+                            <div class="col-auto">
+                                <img src="./assets/ico/up-66.png" class="text-gray-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col mr-2">
+                                <div class="fw-bolder text-warning text-uppercase mb-1">
+                                    Offset Value (mm)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                            </div>
+                            <div class="col-auto">
+                                <img src="./assets/ico/offset-66.png" class="text-gray-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col mr-2">
+                                <div class="fw-bolder text-info text-uppercase mb-1">
+                                    Output Interval (ms)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                            </div>
+                            <div class="col-auto">
+                                <img src="./assets/ico/output-time-66.png" class="text-gray-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+    <!-- <div class="container">
+        <div class="progress mt-4" style="height: 30px;">
+            <div class="progress-bar" id="black-segment" role="progressbar"></div>
+            <div class="progress-bar bg-success" id="green-segment" role="progressbar"></div>
+            <div class="progress-bar bg-warning progress-bar-striped" id="offset-segment" role="progressbar"></div>
+          </div>
+    </div> -->
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/highcharts.js"></script>
+    <script src="./js/highcharts-more.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
