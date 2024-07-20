@@ -23,20 +23,21 @@
             <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
                 aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sensorr</h5>
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" data-lang="menu_title"></h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active text-bg-dark" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active text-bg-dark" aria-current="page" href="index.html"
+                                data-lang="menu_home"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/config.html">Config</a>
+                            <a class="nav-link" href="/config.html" data-lang="menu_config"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/config.html">Documentation</a>
+                            <a class="nav-link" href="/config.html" data-lang="menu_documentation"></a>
                         </li>
 
                     </ul>
@@ -44,7 +45,7 @@
                 </div>
             </div>
 
-            <a class="navbar-brand ms-4 me-0">Industrial Ultrasonic Sensor</a>
+            <a class="navbar-brand ms-4 me-0" data-lang="header_title"></a>
 
 
             <div class="dropdown">
@@ -56,13 +57,14 @@
 
                 </button>
                 <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><button class="dropdown-item active bg-secondary" type="button"><img
+                    <li><button class="dropdown-item active bg-secondary" type="button" data-lang="en"><img
                                 src="./assets/ico/united-kingdom-48.png" style="width: 24px;">&nbsp; En</button>
                     </li>
-                    <li><button class="dropdown-item" type="button"><img src="./assets/ico/germany-48.png"
-                                style="width: 24px;">&nbsp; De</button></li>
-                    <li><button class="dropdown-item" type="button"><img src="./assets/ico/turkey-48.png"
+                    <li><button class="dropdown-item" type="button" data-lang="de"><img
+                                src="./assets/ico/germany-48.png" style="width: 24px;">&nbsp; De</button></li>
+                    <li><button class="dropdown-item" type="button" data-lang="tr"><img src="./assets/ico/turkey-48.png"
                                 style="width: 24px;">&nbsp; Tr</button></li>
+                                
                 </ul>
             </div>
         </div>
@@ -71,11 +73,55 @@
 
     <div class="container mt-5">
         <div class="row g-4">
+
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="card border-left shadow h-100 py-2">
+                    <div class="card-header card-head-text text-center" data-lang="bar_card_title">
+
+                    </div>
+                    <div class="card-body">
+                        <div class="distance-gauge ">
+                            <img src="https://img.icons8.com/?size=100&id=9099&format=png&color=000000" alt="Sensor" class="sensor">
+                            <div class="bar-container">
+                              <div class="bar-mark start">
+                            <div class="mark-line"></div>
+                            <div class="mark-label">0</div>
+                        </div>
+                                <div class="bar"></div>
+                                <div class="indicator">
+                                    <img src="https://img.icons8.com/?size=100&id=lIFyu5NUlX0w&format=png&color=000000" alt="Object" class="object">
+                                </div>
+                               <div class="bar-mark end">
+                            <div class="mark-line"></div>
+                            <div class="mark-label">4000</div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="card border-left shadow h-100 py-2">
+                    <div class="card-body">
+                        <figure class="highcharts-figure">
+                            <div id="container"></div>
+                            <p class="highcharts-description text-center">
+                                You can follow the preview of the measured distance here. Use the display on top of the
+                                sensor to keep track of the instantaneous values more accurately.
+                            </p>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            
+
             <div class="col-12 col-md-12 col-lg-12">
                 <div class="card border-left shadow h-100 py-2">
-                    <div class="card-header card-head-text text-center">
-                        Information
-                      </div>
+                    <div class="card-header card-head-text text-center" data-lang="bar_card_title">
+
+                    </div>
                     <div class="card-body">
                         <div class="progressa">
                             <div class="progressab" id="black-segment"></div>
@@ -83,58 +129,46 @@
                             <div class="progressab" id="offset-segment"></div>
                         </div>
                         <div>
-                            <h4 class="text-center">Min: 100mm - Max: 3500mm</h4>
+                            <h4 class="text-center" ><span>Min:</span> 200mm - <span>Max:</span> 3500mm</h4>
                             <hr>
                             <div class="mb-1">
-                                <span class="text-muted fw-normal" style="font-style: italic;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black" class="bi bi-circle-fill me-2 " viewBox="0 0 16 16" >
-                                    <circle cx="8" cy="8" r="8" />
-                                  </svg>Lower Limit: The bottom of this area is technically unsupported and therefore out of use.</span>
+                                <span class="text-muted fw-normal" style="font-style: italic;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black"
+                                        class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8" />
+                                    </svg><span data-lang="black_segment_info"></span></span>
                             </div>
                             <div class="mb-1">
-                                <span class="text-muted fw-normal" style="font-style: italic;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#27a746" class="bi bi-circle-fill me-2 " viewBox="0 0 16 16" >
-                                    <circle cx="8" cy="8" r="8" />
-                                  </svg>Detection Area: The sensor will detect at selected intervals and output accordingly.</span>
+                                <span class="text-muted fw-normal" style="font-style: italic;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#27a746"
+                                        class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8" />
+                                    </svg><span data-lang="green_segment_info"></span></span>
                             </div>
                             <div class="mb-1">
-                                <span class="text-muted fw-normal" style="font-style: italic;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#ffc107" class="bi bi-circle-fill me-2 " viewBox="0 0 16 16" >
-                                    <circle cx="8" cy="8" r="8" />
-                                  </svg>Positive Offset: Adds a percentage of the offset value you set to the maximum range and extends the maximum distance in the positive direction.</span>
+                                <span class="text-muted fw-normal" style="font-style: italic;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#ffc107"
+                                        class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8" />
+                                    </svg><span data-lang="yellow_segment_info"></span></span>
                             </div>
                             <div class="">
-                                <span class="text-muted fw-normal" style="font-style: italic;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#e74a3b" class="bi bi-circle-fill me-2 " viewBox="0 0 16 16" >
-                                    <circle cx="8" cy="8" r="8" />
-                                  </svg>Negative Offset: Subtracts the percentage of the offset value you set to the maximum range and decreases the maximum distance in the negative direction.</span>
+                                <span class="text-muted fw-normal" style="font-style: italic;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#e74a3b"
+                                        class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8" />
+                                    </svg><span data-lang="red_segment_info"></span></span>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-lg-6">
-                <div class="card border-left shadow h-100 py-2">
-                    <div class="card-body">
-                        <figure class="highcharts-figure">
-                            <div id="container"></div>
-                            <p class="highcharts-description">
-                                Chart showing use of plot bands with a gauge series. The chart is
-                                updated dynamically every few seconds.
-                            </p>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-12 col-lg-6">
-                <div class="card border-left shadow h-100 py-2">
-                    <div class="card-body">
-                        <div id="outputChart"></div>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
 
-        <div class="row mt-3 g-2">
+        <div class="row mt-3 g-2 mb-5">
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card border-left-danger shadow h-100 py-2">
                     <div class="card-body">
@@ -156,8 +190,8 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col mr-2">
-                                <div class="fw-bolder text-success text-uppercase mb-1">
-                                    Maximum Distance (mm)</div>
+                                <div class="fw-bolder text-success text-uppercase mb-1" data-lang="max_dis_label">
+                                    </div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">4000</div>
                             </div>
                             <div class="col-auto">
@@ -215,13 +249,14 @@
     </div> -->
 
 
-    
 
 
 
 
 
 
+
+    <div class="footer"></div>
 
 
 
@@ -229,7 +264,8 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/highcharts.js"></script>
     <script src="./js/highcharts-more.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/accessibility.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
