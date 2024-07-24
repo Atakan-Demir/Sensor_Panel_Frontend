@@ -51,6 +51,11 @@ body{
     border-left: .25rem solid var(--warning-c)  !important;
 }
 
+.border-bottom-warning {
+    border-bottom: .15rem solid var(--warning-c)  !important;
+    width: 50%;
+}
+
 .border-left-info {
     border-left: .25rem solid var(--info-c)  !important;
     /* border-left: .25rem solid #0dcaf0  !important; */
@@ -69,6 +74,11 @@ body{
 
 .text-success {
     color: var(--success-c) !important;
+}
+.text-warning {
+    color: var(--warning-c) !important;
+    /* text shadow*/
+    text-shadow: 1px 1px 2px #0000008c;
 }
 
 
@@ -143,12 +153,12 @@ body{
     display: flex;
     align-items: center;
     position: relative;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .sensor {
-    width: 50px;
+    width: 36px;
     margin-right: 10px;
 }
 
@@ -201,7 +211,7 @@ body{
 
 .bar-mark.end {
     right: 0;
-  margin-right:-8px
+  margin-right:-10px
 }
 
 .mark-line {
@@ -269,4 +279,54 @@ body{
     height: 100px;
     bottom: 0;
     width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .navbar-brand {
+        margin: 0 !important;
+        font-size: 16px;
+    }
+    
+    
+    
+    
+    .sensor {
+        width: 30px;
+        margin-right: 5px;
+    }
+    .bar-container {
+        height: 15px;
+    }
+    .bar {
+        height: 100%;
+        border-radius: 7.5px;
+    }
+    .object {
+        width: 20px;
+        top: -7.5px;
+    }
+    .bar-mark {
+        margin-top: 0px;
+    }
+    .mark-line {
+        height: 15px;
+    }
+    .mark-label {
+        margin-top: 3px;
+        font-size: 10px;
+    }
+    .footer {
+        height: 50px;
+    }
+        
 }

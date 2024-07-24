@@ -37,7 +37,7 @@
                             <a class="nav-link" href="/config.html" data-lang="menu_config"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/config.html" data-lang="menu_documentation"></a>
+                            <a class="nav-link" href="/documentation.html" data-lang="menu_documentation"></a>
                         </li>
 
                     </ul>
@@ -64,7 +64,7 @@
                                 src="./assets/ico/germany-48.png" style="width: 24px;">&nbsp; De</button></li>
                     <li><button class="dropdown-item" type="button" data-lang="tr"><img src="./assets/ico/turkey-48.png"
                                 style="width: 24px;">&nbsp; Tr</button></li>
-                                
+
                 </ul>
             </div>
         </div>
@@ -76,171 +76,222 @@
 
             <div class="col-12 col-md-12 col-lg-6">
                 <div class="card border-left shadow h-100 py-2">
-                    <div class="card-header card-head-text text-center" data-lang="bar_card_title">
-
+                    <div class="card-header card-head-text text-center" data-lang="">
+                        Sensor
                     </div>
                     <div class="card-body">
-                        <div class="distance-gauge ">
-                            <img src="https://img.icons8.com/?size=100&id=9099&format=png&color=000000" alt="Sensor" class="sensor">
-                            <div class="bar-container">
-                              <div class="bar-mark start">
-                            <div class="mark-line"></div>
-                            <div class="mark-label">0</div>
-                        </div>
-                                <div class="bar"></div>
-                                <div class="indicator">
-                                    <img src="https://img.icons8.com/?size=100&id=lIFyu5NUlX0w&format=png&color=000000" alt="Object" class="object">
+                        <div class="row g-4">
+
+
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="me-2">
+                                    <!-- <img src="./assets/ico/offline-48.png" alt=""> -->
+                                    <img src="./assets/ico/online-48.png" alt="" style="width: 36px;">
                                 </div>
-                               <div class="bar-mark end">
-                            <div class="mark-line"></div>
-                            <div class="mark-label">4000</div>
-                        </div>
+                                <div class=" fw-bolder ">
+                                    <span>The sensor is online and monitored.</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mt-0">
+                                <span class="text-muted fw-normal">Everything seems to be fine.</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-12 col-lg-6">
-                <div class="card border-left shadow h-100 py-2">
-                    <div class="card-body">
-                        <figure class="highcharts-figure">
-                            <div id="container"></div>
-                            <p class="highcharts-description text-center">
-                                You can follow the preview of the measured distance here. Use the display on top of the
-                                sensor to keep track of the instantaneous values more accurately.
-                            </p>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-
-            
-
-            <div class="col-12 col-md-12 col-lg-12">
-                <div class="card border-left shadow h-100 py-2">
-                    <div class="card-header card-head-text text-center" data-lang="bar_card_title">
-
-                    </div>
-                    <div class="card-body">
-                        <div class="progressa">
-                            <div class="progressab" id="black-segment"></div>
-                            <div class="progressab" id="green-segment"></div>
-                            <div class="progressab" id="offset-segment"></div>
-                        </div>
-                        <div>
-                            <h4 class="text-center" ><span>Min:</span> 200mm - <span>Max:</span> 3500mm</h4>
-                            <hr>
-                            <div class="mb-1">
-                                <span class="text-muted fw-normal" style="font-style: italic;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black"
-                                        class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
-                                        <circle cx="8" cy="8" r="8" />
-                                    </svg><span data-lang="black_segment_info"></span></span>
-                            </div>
-                            <div class="mb-1">
-                                <span class="text-muted fw-normal" style="font-style: italic;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#27a746"
-                                        class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
-                                        <circle cx="8" cy="8" r="8" />
-                                    </svg><span data-lang="green_segment_info"></span></span>
-                            </div>
-                            <div class="mb-1">
-                                <span class="text-muted fw-normal" style="font-style: italic;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#ffc107"
-                                        class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
-                                        <circle cx="8" cy="8" r="8" />
-                                    </svg><span data-lang="yellow_segment_info"></span></span>
-                            </div>
-                            <div class="">
-                                <span class="text-muted fw-normal" style="font-style: italic;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#e74a3b"
-                                        class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
-                                        <circle cx="8" cy="8" r="8" />
-                                    </svg><span data-lang="red_segment_info"></span></span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-        </div>
-
-        <div class="row mt-3 g-2 mb-5">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card border-left-danger shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col mr-2">
-                                <div class="fw-bolder text-danger text-uppercase mb-1">
-                                    Minimum Distance (mm)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">30</div>
-                            </div>
-                            <div class="col-auto">
-                                <img src="./assets/ico/down-66.png" class="text-gray-300">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card border-left-success shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col mr-2">
-                                <div class="fw-bolder text-success text-uppercase mb-1" data-lang="max_dis_label">
+                        <hr>
+                        <div class=" row g-4 mt-4 justify-content-center">
+                                    <div class="distance-gauge ">
+                                        <img src="https://img.icons8.com/?size=100&id=9099&format=png&color=000000"
+                                            alt="Sensor" class="sensor">
+                                        <div class="bar-container">
+                                            <div class="bar-mark start">
+                                                <div class="mark-line"></div>
+                                                <div class="mark-label">0</div>
+                                            </div>
+                                            <div class="bar"></div>
+                                            <div class="indicator">
+                                                <img src="https://img.icons8.com/?size=100&id=lIFyu5NUlX0w&format=png&color=000000"
+                                                    alt="Object" class="object">
+                                            </div>
+                                            <div class="bar-mark end">
+                                                <div class="mark-line"></div>
+                                                <div class="mark-label">4000</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">4000</div>
+                                    <div class="row mt-5">
+                                        <div class="text-start col-4">
+                                            <h5 class="text-start" data-lang="distance_label">Min (mm)</h5>
+                                            <h3 class="text-start" id="distance">100</h3>
+                                        </div>
+                                        <div class="text-center col-4">
+                                            <h4 class="text-center" data-lang="distance_label">Distance (mm)</h4>
+                                            <h1 class="text-center" id="distance">0</h1>
+                                        </div>
+                                        <div class="text-end col-4">
+                                            <h5 class="text-end" data-lang="distance_label">Max (mm)</h5>
+                                            <h3 class="text-end" id="distance">4000</h3>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row mt-1 align-items-center">
+                                        <hr>
+                                        <div class="d-flex flex-column h-100 text-center align-items-center">
+                                            <h3 class="text-warning fw-bolder"> WARNING :</h3>
+                                            <div class="border-bottom-warning mb-4"></div>
+                                            <span class="text-muted fw-normal "
+                                                style="font-style: italic;font-size: 18px;">You can follow the preview
+                                                of the measured distance here. Use the display on top of the sensor to
+                                                keep track of the instantaneous values more accurately.</span>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="col-auto">
-                                <img src="./assets/ico/up-66.png" class="text-gray-300">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="card border-left shadow h-100 py-2">
+                            <div class="card-body">
+                                <figure class="highcharts-figure">
+                                    <div id="container"></div>
+                                    <p class="highcharts-description text-center">
+                                        You can follow the preview of the measured distance here. Use the display on top
+                                        of the
+                                        sensor to keep track of the instantaneous values more accurately.
+                                    </p>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <div class="card border-left shadow h-100 py-2">
+                            <div class="card-header card-head-text text-center" data-lang="bar_card_title">
+
+                            </div>
+                            <div class="card-body">
+                                <div class="progressa">
+                                    <div class="progressab" id="black-segment"></div>
+                                    <div class="progressab" id="green-segment"></div>
+                                    <div class="progressab" id="offset-segment"></div>
+                                </div>
+                                <div>
+                                    <h4 class="text-center"><span>Min:</span> 200mm - <span>Max:</span> 3500mm</h4>
+                                    <hr>
+                                    <div class="mb-1">
+                                        <span class="text-muted fw-normal" style="font-style: italic;"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black"
+                                                class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
+                                                <circle cx="8" cy="8" r="8" />
+                                            </svg><span data-lang="black_segment_info"></span></span>
+                                    </div>
+                                    <div class="mb-1">
+                                        <span class="text-muted fw-normal" style="font-style: italic;"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#27a746"
+                                                class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
+                                                <circle cx="8" cy="8" r="8" />
+                                            </svg><span data-lang="green_segment_info"></span></span>
+                                    </div>
+                                    <div class="mb-1">
+                                        <span class="text-muted fw-normal" style="font-style: italic;"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#ffc107"
+                                                class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
+                                                <circle cx="8" cy="8" r="8" />
+                                            </svg><span data-lang="yellow_segment_info"></span></span>
+                                    </div>
+                                    <div class="">
+                                        <span class="text-muted fw-normal" style="font-style: italic;"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#e74a3b"
+                                                class="bi bi-circle-fill me-2 " viewBox="0 0 16 16">
+                                                <circle cx="8" cy="8" r="8" />
+                                            </svg><span data-lang="red_segment_info"></span></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row mt-3 g-2 mb-5">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-left-danger shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="fw-bolder text-danger text-uppercase mb-1">
+                                            Minimum Distance (mm)</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">30</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <img src="./assets/ico/down-66.png" class="text-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="fw-bolder text-success text-uppercase mb-1"
+                                            data-lang="max_dis_label">
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">4000</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <img src="./assets/ico/up-66.png" class="text-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="fw-bolder text-warning text-uppercase mb-1">
+                                            Offset Value (mm)</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <img src="./assets/ico/offset-66.png" class="text-gray-300">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="fw-bolder text-info text-uppercase mb-1">
+                                            Output Interval (ms)</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <img src="./assets/ico/output-time-66.png" class="text-gray-300">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card border-left-warning shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col mr-2">
-                                <div class="fw-bolder text-warning text-uppercase mb-1">
-                                    Offset Value (mm)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
-                            </div>
-                            <div class="col-auto">
-                                <img src="./assets/ico/offset-66.png" class="text-gray-300">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col mr-2">
-                                <div class="fw-bolder text-info text-uppercase mb-1">
-                                    Output Interval (ms)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
-                            </div>
-                            <div class="col-auto">
-                                <img src="./assets/ico/output-time-66.png" class="text-gray-300">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
         </div>
-    </div>
 
-
-
-    </div>
-
-    <!-- <div class="container">
+        <!-- <div class="container">
         <div class="progress mt-4" style="height: 30px;">
             <div class="progress-bar" id="black-segment" role="progressbar"></div>
             <div class="progress-bar bg-success" id="green-segment" role="progressbar"></div>
@@ -256,16 +307,16 @@
 
 
 
-    <div class="footer"></div>
+        <div class="footer"></div>
 
 
 
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/highcharts.js"></script>
-    <script src="./js/highcharts-more.js"></script>
-    <script src="./js/accessibility.js"></script>
-    <script type="module" src="./js/main.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/highcharts.js"></script>
+        <script src="./js/highcharts-more.js"></script>
+        <script src="./js/accessibility.js"></script>
+        <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
