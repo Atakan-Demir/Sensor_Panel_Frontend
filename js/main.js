@@ -1,5 +1,5 @@
 // main.js
-import { initChart, updateChart, hideHighchartsCredits } from './chart.js';
+
 import { updateSegments } from './bar.js';
 import { updateLanguage } from './language.js';
 import { updateDistanceIndicator } from './distance_indicator.js';
@@ -38,9 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
         percent: 3
     };
 
-    initChart(currentValues);
-    updateChart();
-    hideHighchartsCredits();
-    updateSegments(currentValues);
+    //try catch
+    try {
+        updateSegments(currentValues);
     updateDistanceIndicator();
+    } catch (error) {
+        console.log("Missing element in the DOM");
+    }
+
+
+    
 });
